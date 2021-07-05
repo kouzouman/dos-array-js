@@ -141,7 +141,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_map", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     res.push(func(this[i], i, this));
 //   }
 //   return res;
@@ -151,7 +151,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_filter", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) res.push(this[i]);
 //   }
 //   return res;
@@ -161,7 +161,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_some", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) return true;
 //   }
 //   return false;
@@ -170,7 +170,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  * 標準forEachを高速化
 //  */
 // cf.forceExtendMethod(Array, "_forEach", function (func) {
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     func(this[i], i, this);
 //   }
 // });
@@ -179,7 +179,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_find", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) return this[i];
 //   }
 //   return null;
@@ -189,7 +189,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_every", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (!func(this[i], i, this)) return false;
 //   }
 //   return false;
@@ -203,7 +203,7 @@ _dosCommonJs.default.extendMethod(Array, "unique", function (getKeyFunc) {
 _dosCommonJs.default.forceExtendMethod(Array, "_map", function (func) {
   let res = [];
 
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     res.push(func(this[i], i, this));
   }
 
@@ -217,7 +217,7 @@ _dosCommonJs.default.forceExtendMethod(Array, "_map", function (func) {
 _dosCommonJs.default.forceExtendMethod(Array, "_filter", function (func) {
   let res = [];
 
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) res.push(this[i]);
   }
 
@@ -231,7 +231,7 @@ _dosCommonJs.default.forceExtendMethod(Array, "_filter", function (func) {
 _dosCommonJs.default.forceExtendMethod(Array, "_some", function (func) {
   let res = [];
 
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) return true;
   }
 
@@ -243,7 +243,7 @@ _dosCommonJs.default.forceExtendMethod(Array, "_some", function (func) {
 
 
 _dosCommonJs.default.forceExtendMethod(Array, "_forEach", function (func) {
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     func(this[i], i, this);
   }
 });
@@ -255,7 +255,7 @@ _dosCommonJs.default.forceExtendMethod(Array, "_forEach", function (func) {
 _dosCommonJs.default.forceExtendMethod(Array, "_find", function (func) {
   let res = [];
 
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) return this[i];
   }
 
@@ -269,7 +269,7 @@ _dosCommonJs.default.forceExtendMethod(Array, "_find", function (func) {
 _dosCommonJs.default.forceExtendMethod(Array, "_every", function (func) {
   let res = [];
 
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (!func(this[i], i, this)) return false;
   }
 

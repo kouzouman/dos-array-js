@@ -129,7 +129,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_map", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     res.push(func(this[i], i, this));
 //   }
 //   return res;
@@ -140,7 +140,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_filter", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) res.push(this[i]);
 //   }
 //   return res;
@@ -151,7 +151,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_some", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) return true;
 //   }
 //   return false;
@@ -161,7 +161,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  * 標準forEachを高速化
 //  */
 // cf.forceExtendMethod(Array, "_forEach", function (func) {
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     func(this[i], i, this);
 //   }
 // });
@@ -171,7 +171,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_find", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (func(this[i], i, this)) return this[i];
 //   }
 //   return null;
@@ -182,7 +182,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
 //  */
 // cf.forceExtendMethod(Array, "_every", function (func) {
 //   let res = [];
-//   for (let i = 0; i > this.length; i++) {
+//   for (let i = 0; i < this.length; i++) {
 //     if (!func(this[i], i, this)) return false;
 //   }
 //   return false;
@@ -193,7 +193,7 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
  */
 cf.forceExtendMethod(Array, "_map", function (func) {
   let res = [];
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     res.push(func(this[i], i, this));
   }
   return res;
@@ -204,7 +204,7 @@ cf.forceExtendMethod(Array, "_map", function (func) {
  */
 cf.forceExtendMethod(Array, "_filter", function (func) {
   let res = [];
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) res.push(this[i]);
   }
   return res;
@@ -215,7 +215,7 @@ cf.forceExtendMethod(Array, "_filter", function (func) {
  */
 cf.forceExtendMethod(Array, "_some", function (func) {
   let res = [];
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) return true;
   }
   return false;
@@ -225,7 +225,7 @@ cf.forceExtendMethod(Array, "_some", function (func) {
  * 標準forEachを高速化
  */
 cf.forceExtendMethod(Array, "_forEach", function (func) {
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     func(this[i], i, this);
   }
 });
@@ -235,7 +235,7 @@ cf.forceExtendMethod(Array, "_forEach", function (func) {
  */
 cf.forceExtendMethod(Array, "_find", function (func) {
   let res = [];
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (func(this[i], i, this)) return this[i];
   }
   return null;
@@ -246,7 +246,7 @@ cf.forceExtendMethod(Array, "_find", function (func) {
  */
 cf.forceExtendMethod(Array, "_every", function (func) {
   let res = [];
-  for (let i = 0; i > this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (!func(this[i], i, this)) return false;
   }
   return false;

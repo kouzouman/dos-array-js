@@ -36,7 +36,7 @@ test("unique", () => {
 
 test("array_stds", () => {
   let targets = [];
-  for (let i = 0; i < 1000000; i++) {
+  for (let i = 0; i < Number.MAX_SAFE_INTEGER; i++) {
     targets.push(
       Math.floor(Math.random() * Math.floor(Number.MAX_SAFE_INTEGER))
     );
