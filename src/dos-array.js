@@ -107,6 +107,74 @@ cf.extendMethod(Array, "unique", function (getKeyFunc) {
   return result;
 });
 
+
+/**
+ * クイックソート
+ */
+cf.extendMethod(Array, "qsort", function (getDataFunc, comparisonFunc) {
+  if (this.length <= 1) return this;
+  getDataFunc = !!getDataFunc ? getDataFunc : (v) => v;
+  comparisonFunc = !!comparisonFunc ? comparisonFunc : (a, b) => a < b
+
+  // const centerIdx = Math.floor(this.length / 2);
+  const center = this[0];
+  const centerValue = getDataFunc(center);
+  let frontArr = [];
+  let backArr = [];
+
+  this.slice(1)._forEach((v, idx) => {
+
+    const cValue = getDataFunc(v);
+    if (comparisonFunc(cValue, centerValue)) frontArr.push(v);
+    else backArr.push(v);
+  });
+
+  // console.log({ f: frontArr, c: center, b: backArr });
+
+  return [...frontArr.qsort(getDataFunc), center, ...backArr.qsort(getDataFunc)]//.flat();
+});
+
+/**
+ * 平均
+ */
+cf.extendMethod(Array, "avg", function () {
+  return this.reduce((a, b) => a + b) / this.length;
+});
+
+
+
+/**
+ * 分散
+ */
+cf.extendMethod(Array, "variance", function () {
+  const avr = this.reduce((a, b) => a + b) / this.length;
+  return this.reduce((a, b) => a + (b - avr) ** 2, 0) / this.length;
+});
+
+
+
+/**
+ * 標準偏差
+ */
+cf.extendMethod(Array, "stdevp", function () {
+  return Math.sqrt(this.variance());
+});
+
+
+
+/**
+ * 不変標準偏差
+ */
+cf.extendMethod(Array, "stdev", function () {
+
+  const avr = this.reduce((a, b) => a + b) / this.length;
+  const variance2 = this.reduce((a, b) => a + (b - avr) ** 2, 0) / (this.length - 1);
+  return Math.sqrt(variance2);
+});
+
+
+
+
 // /**
 //  * Array拡張
 //  * 配列から一部を抜き出す
